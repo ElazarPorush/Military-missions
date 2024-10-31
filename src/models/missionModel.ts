@@ -1,6 +1,7 @@
 export default interface Mission {
-   name: string
-   status: string
-   priority: string
-   description: string 
+    id: string
+    name: string
+    status: string
+    priority: string
+    description: string
 }

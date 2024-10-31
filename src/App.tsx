@@ -10,7 +10,7 @@ export default function App() {
       <h1>Military Operations Dashboard</h1>
       <AddMission changeMissions={changeMissions} setChangeMissions={setChangeMissions}/>
       <h2>Missions</h2>
-      <Missions changeMissions={changeMissions}/>
+      <Missions changeMissions={changeMissions} setChangeMissions={setChangeMissions}/>
     </div>
   )
 }
