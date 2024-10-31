@@ -10,10 +10,10 @@ export default function Item({item, changeMission, setChangeMissions}: Props) {
   if (!item) {
     return <div><p>There is no Missions Yet</p></div>
   }
-  const deleteMission = (id: string) => {
+  const deleteMission = () => {
     ((async() => {
       try {
-        await fetch(`https://reactexambackend.onrender.com/missions/9132635/${id}`, {
+        await fetch(`https://reactexambackend.onrender.com/missions/9132635/${item._id}`, {
           method: 'DELETE'
         })
         setChangeMissions(changeMission - 1)
@@ -23,7 +23,7 @@ export default function Item({item, changeMission, setChangeMissions}: Props) {
     }))()
   }
   return (
-    <div className='row'>
+    <div className='row' style={{backgroundColor: item.status === 'Pending'? '#910000': item.status === "In Progress"? '#BE7D00': '#009114'}}>
         <div>
             <p>Name: {item.name}</p>
             <p>Status: {item.status}</p>
@@ -31,8 +31,8 @@ export default function Item({item, changeMission, setChangeMissions}: Props) {
             <p>Description: {item.description}</p>
         </div>
         <div className='buttons'>
-            <button onClick={() => deleteMission(item.id)}>Delete</button>
-            <button>Progress</button>
+            <button onClick={deleteMission}>Delete</button>
+            {item.status !== "Completed"? <button>Progress</button>: ''}
         </div>
     </div>
   )

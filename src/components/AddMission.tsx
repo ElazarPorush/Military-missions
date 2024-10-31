@@ -24,7 +24,6 @@ export default function AddMission({changeMissions, setChangeMissions}: Props) {
             description
           })
         })
-        console.log(result)
         setChangeMissions(changeMissions + 1)
       } catch (err) {
         console.log(err)
@@ -44,9 +43,9 @@ export default function AddMission({changeMissions, setChangeMissions}: Props) {
     <div className='add-form'>
       <input type="text" placeholder='enter here your name' id='name' onChange={e => setName(e.target.value)}/>
       <select name="status" id="status" onChange={e => setStatus(e.target.value)}>
-        <option value="pending">Pending</option>
-        <option value="in-progress">In Progress</option>
-        <option value="completed">Completed</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
       </select>
       <select name="priority" id="priority" onChange={e => setPriority(e.target.value)}>
         <option value="high">High</option>
