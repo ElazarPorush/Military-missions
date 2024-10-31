@@ -1,7 +1,11 @@
 import React from 'react'
+import Item from './Item'
 
 export default function Missions() {
   return (
-    <div>Missions</div>
+    <div>
+        <Item />
+        <Item />
+    </div>
   )
 }

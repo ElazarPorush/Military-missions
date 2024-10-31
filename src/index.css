@@ -3,3 +3,71 @@
   line-height: 1.5;
   font-weight: 400;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0F0F0;
+}
+
+h1 {
+  color: #4B8C55;
+  text-align: center;
+}
+
+h2 {
+  color: #FC1C17;
+}
+
+button {
+  background-color: #D7504B;
+  border: none;
+  padding: 3px;
+}
+
+button:hover {
+  background-color: #e13732;
+}
+
+input, select, textarea{
+  width: 100%;
+  border-radius: 5px;
+}
+
+textarea {
+  margin-top: 3px;
+}
+
+p {
+  color: white;
+}
+
+.add-form {
+  background-color: #4B8C55;
+  /* height: 18vh; */
+  padding: 5px;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+.row {
+  background-color: #4B8C55;
+  margin: 4px;
+  padding: 5px;
+  padding-left: 8px;
+  /* height: 10vh; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
