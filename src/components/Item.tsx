@@ -1,13 +1,17 @@
-import React from 'react'
+import Mission from "../models/missionModel"
 
-export default function Item() {
+interface Props {
+  item: Mission
+}
+
+export default function Item({item}: Props) {
   return (
     <div className='row'>
         <div>
-            <p>Name: Elazar</p>
-            <p>Status: Completed</p>
-            <p>Priority: (Low)</p>
-            <p>Description: Finish to build the exem</p>
+            <p>Name: {item.name}</p>
+            <p>Status: {item.status}</p>
+            <p>Priority: ({item.priority})</p>
+            <p>Description: {item.description}</p>
         </div>
         <div className='buttons'>
             <button>Delete</button>
